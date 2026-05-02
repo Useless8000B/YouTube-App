@@ -7,6 +7,7 @@ class AppbarWidget extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      backgroundColor: AppColors.black,
       elevation: 0,
       title: Row(
         mainAxisSize: MainAxisSize.min,
@@ -46,26 +47,8 @@ class AppbarWidget extends StatelessWidget implements PreferredSizeWidget {
           onPressed: () {},
         ),
         IconButton(
-          icon: const Icon(Icons.notifications_outlined, color: AppColors.white),
-          onPressed: () {},
-        ),
-        IconButton(
           icon: const Icon(Icons.search, color: AppColors.white),
           onPressed: () {},
-        ),
-        GestureDetector(
-          onTap: () {},
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8),
-            child: CircleAvatar(
-              radius: 16,
-              backgroundColor: Colors.deepPurple,
-              child: const Text(
-                'U',
-                style: TextStyle(color: Colors.white, fontSize: 14),
-              ),
-            ),
-          ),
         ),
       ],
     );
