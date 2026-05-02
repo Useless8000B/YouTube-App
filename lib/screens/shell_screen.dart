@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:youtube_app/navigation/bottom_navigator.dart';
 import 'package:youtube_app/screens/home_screen.dart';
 import 'package:youtube_app/screens/perfil_screen.dart';
-import 'package:youtube_app/screens/shorts_screen.dart';
+import 'package:youtube_app/screens/notifications_screen.dart';
 import 'package:youtube_app/screens/subscriptions_screen.dart';
 import 'package:youtube_app/widgets/appbar_widget.dart';
 
@@ -18,8 +18,8 @@ class _ShellScreenState extends State<ShellScreen> {
 
   final List<Widget> _pages = const [
     HomeScreen(),
-    ShortsScreen(),
     SubscriptionsScreen(),
+    NotificationsScreen(),
     PerfilScreen()
   ];
 
