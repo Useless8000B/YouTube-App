@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:youtube_app/colors.dart';
 import 'package:youtube_app/screens/shell_screen.dart';
 
 void main() {
@@ -15,9 +16,10 @@ class MyApp extends StatelessWidget {
       title: 'YouTube',
       theme: ThemeData(
         colorScheme: .fromSeed(
-          seedColor: Colors.white,
+          seedColor: AppColors.white,
           brightness: Brightness.dark,
         ),
+        scaffoldBackgroundColor: AppColors.black
       ),
       home: const ShellScreen(),
     );
