@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:youtube_app/navigation/bottom_navigator.dart';
 import 'package:youtube_app/screens/home_screen.dart';
+import 'package:youtube_app/screens/perfil_screen.dart';
 import 'package:youtube_app/screens/shorts_screen.dart';
 import 'package:youtube_app/screens/subscriptions_screen.dart';
 import 'package:youtube_app/widgets/appbar_widget.dart';
@@ -17,12 +19,12 @@ class _ShellScreenState extends State<ShellScreen> {
   final List<Widget> _pages = const [
     HomeScreen(),
     ShortsScreen(),
-    SubscriptionsScreen()
+    SubscriptionsScreen(),
+    PerfilScreen()
   ];
 
   void navigate(int index) {
     setState(() {
-      Navigator.pop(context);
       currentIndex = index;
     });
   }
@@ -30,6 +32,7 @@ class _ShellScreenState extends State<ShellScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppbarWidget(),
+      bottomNavigationBar: BottomNavigator(currentIndex: currentIndex, onTap: navigate,),
       body: SafeArea(
         child: IndexedStack(
           index: currentIndex,
