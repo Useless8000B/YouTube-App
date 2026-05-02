@@ -28,7 +28,6 @@ class AppbarWidget extends StatelessWidget implements PreferredSizeWidget {
             ),
           ),
           const SizedBox(width: 6),
-          // Texto "YouTube" em preto
           const Text(
             'YouTube',
             style: TextStyle(
